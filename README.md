@@ -1,217 +1,55 @@
 # conjarra
 
-## database example
-
-infinitive abandonar
-infinitive_english "to abandon, leave behind, desert; to quit, give up"
-mood Indicativo
-mood_english Indicative
-tense Presente
-tense_english Present
-verb_english "I abandon, am abandoning"
-form_1s abandono
-form_2s abandonas
-form_3s abandona
-form_1p abandonamos
-form_2p abandonáis
-form_3p abandonan
-gerund abandonando
-gerund_english abandoning
-pastparticiple abandonado
-pastparticiple_english abandoned
-
-
-   [ { infinitive: 'sustituir',
-       mood: 'Imperativo Afirmativo',
-       tense: 'Presente',
-       verb_english: 'Substitute! Don\'t substitute!',
-       form_1s: '',
-       form_2s: 'sustituye',
-       form_3s: 'sustituid',
-       form_1p: '',
-       form_2p: 'sustituya',
-       form_3p: 'sustituyan' },
-     { infinitive: 'sustituir',
-       mood: 'Imperativo Negativo',
-       tense: 'Presente',
-       verb_english: 'Substitute! Don\'t substitute!',
-       form_1s: '',
-       form_2s: 'no sustituyas',
-       form_3s: 'no sustituyáis',
-       form_1p: '',
-       form_2p: 'no sustituya',
-       form_3p: 'no sustituyan' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Condicional',
-       verb_english: 'I would substitute',
-       form_1s: 'sustituiría',
-       form_2s: 'sustituirías',
-       form_3s: 'sustituiría',
-       form_1p: 'sustituiríamos',
-       form_2p: 'sustituiríais',
-       form_3p: 'sustituirían' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Condicional perfecto',
-       verb_english: 'I would have substituted',
-       form_1s: 'habría sustituido',
-       form_2s: 'habrías sustituido',
-       form_3s: 'habría sustituido',
-       form_1p: 'habríamos sustituido',
-       form_2p: 'habríais sustituido',
-       form_3p: 'habrían sustituido' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Futuro',
-       verb_english: 'I will substitute',
-       form_1s: 'sustituiré',
-       form_2s: 'sustituirás',
-       form_3s: 'sustituirá',
-       form_1p: 'sustituiremos',
-       form_2p: 'sustituiréis',
-       form_3p: 'sustituirán' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Futuro perfecto',
-       verb_english: 'I will have substituted',
-       form_1s: 'habré sustituido',
-       form_2s: 'habrás sustituido',
-       form_3s: 'habrá sustituido',
-       form_1p: 'habremos sustituido',
-       form_2p: 'habréis sustituido',
-       form_3p: 'habrán sustituido' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Imperfecto',
-       verb_english: 'I was substituting, used to substitute, substituted',
-       form_1s: 'sustituía',
-       form_2s: 'sustituías',
-       form_3s: 'sustituía',
-       form_1p: 'sustituíamos',
-       form_2p: 'sustituíais',
-       form_3p: 'sustituían' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Pluscuamperfecto',
-       verb_english: 'I had substituted',
-       form_1s: 'había sustituido',
-       form_2s: 'habías sustituido',
-       form_3s: 'había sustituido',
-       form_1p: 'habíamos sustituido',
-       form_2p: 'habíais sustituido',
-       form_3p: 'habían sustituido' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Presente',
-       verb_english: 'I substitute, am substituting',
-       form_1s: 'sustituyo',
-       form_2s: 'sustituyes',
-       form_3s: 'sustituye',
-       form_1p: 'sustituimos',
-       form_2p: 'sustituís',
-       form_3p: 'sustituyen' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Presente perfecto',
-       verb_english: 'I have substituted',
-       form_1s: 'he sustituido',
-       form_2s: 'has sustituido',
-       form_3s: 'ha sustituido',
-       form_1p: 'hemos sustituido',
-       form_2p: 'habéis sustituido',
-       form_3p: 'han sustituido' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Pretérito',
-       verb_english: 'I substituted',
-       form_1s: 'sustituí',
-       form_2s: 'sustituiste',
-       form_3s: 'sustituyó',
-       form_1p: 'sustituimos',
-       form_2p: 'sustituisteis',
-       form_3p: 'sustituyeron' },
-     { infinitive: 'sustituir',
-       mood: 'Indicativo',
-       tense: 'Pretérito anterior',
-       verb_english: 'I had substituted',
-       form_1s: 'hube sustituido',
-       form_2s: 'hubiste sustituido',
-       form_3s: 'hubo sustituido',
-       form_1p: 'hubimos sustituido',
-       form_2p: 'hubisteis sustituido',
-       form_3p: 'hubieron sustituido' },
-     { infinitive: 'sustituir',
-       mood: 'Subjuntivo',
-       tense: 'Futuro',
-       verb_english: 'I will substitute',
-       form_1s: 'sustituyere',
-       form_2s: 'sustituyeres',
-       form_3s: 'sustituyere',
-       form_1p: 'sustituyéremos',
-       form_2p: 'sustituyereis',
-       form_3p: 'sustituyeren' },
-     { infinitive: 'sustituir',
-       mood: 'Subjuntivo',
-       tense: 'Futuro perfecto',
-       verb_english: 'I will have substituted',
-       form_1s: 'hubiere sustituido',
-       form_2s: 'hubieres sustituido',
-       form_3s: 'hubiere sustituido',
-       form_1p: 'hubiéremos sustituido',
-       form_2p: 'hubiereis sustituido',
-       form_3p: 'hubieren sustituido' },
-     { infinitive: 'sustituir',
-       mood: 'Subjuntivo',
-       tense: 'Imperfecto',
-       verb_english: 'I substituted, was substituting',
-       form_1s: 'sustituyera',
-       form_2s: 'sustituyeras',
-       form_3s: 'sustituyera',
-       form_1p: 'sustituyéramos',
-       form_2p: 'sustituyerais',
-       form_3p: 'sustituyeran' },
-     { infinitive: 'sustituir',
-       mood: 'Subjuntivo',
-       tense: 'Pluscuamperfecto',
-       verb_english: 'I had substituted',
-       form_1s: 'hubiera sustituido',
-       form_2s: 'hubieras sustituido',
-       form_3s: 'hubiera sustituido',
-       form_1p: 'hubiéramos sustituido',
-       form_2p: 'hubierais sustituido',
-       form_3p: 'hubieran sustituido' },
-     { infinitive: 'sustituir',
-       mood: 'Subjuntivo',
-       tense: 'Presente',
-       verb_english: 'I substitute, am substituting',
-       form_1s: 'sustituya',
-       form_2s: 'sustituyas',
-       form_3s: 'sustituya',
-       form_1p: 'sustituyamos',
-       form_2p: 'sustituyáis',
-       form_3p: 'sustituyan' },
-     { infinitive: 'sustituir',
-       mood: 'Subjuntivo',
-       tense: 'Presente perfecto',
-       verb_english: 'I have substituted, substituted',
-       form_1s: 'haya sustituido',
-       form_2s: 'hayas sustituido',
-       form_3s: 'haya sustituido',
-       form_1p: 'hayamos sustituido',
-       form_2p: 'hayáis sustituido',
-       form_3p: 'hayan sustituido' } ],
-
 ## todo
-the thing
-weight to irregular verbs?
-compile / minify shit
-testing
-debugging express nodehero tutorial
-for good?
+- the thing
+- beauty
+- favicon
+- about page / links
+- hover for english
+- add in freaking semicolons to server code
+- could actually do the whole 9 yards js lint thing
+- write a proper readme lol (project goals incl. no jquery)
+- landing page loading bar (sangría?)
+- timer clock
+- weight to irregular verbs?
+- compile / minify
+- testing
+- debugging express nodehero tutorial
+- for good?
 
 ## done
-installed node, bla blah
-installed postgres
-createdb verbos
-psql verbos < fred-jehle-spanish-verbs/jehle_verb_postgresql.sql
+- installed node, bla blah
+- installed postgres
+- createdb verbos
+- psql verbos < fred-jehle-spanish-verbs/jehle_verb_postgresql.sql
+
+## example
+
+Presente:
+Pretérito:
+Imperfecto:
+Futuro:
+Condicional:
+
+Presente perfecto:
+Pretérito anterior:
+Pluscuamperfecto:
+Futuro perfecto:
+Condicional perfecto:
+
+Presente subjuntivo:
+Imperfecto subjuntivo:
+Futuro subjuntivo: 
+Presente perfecto subjuntivo
+Pluscuamperfecto subjuntivo:
+Futuro perfecto subjuntivo:
+
+Imperativo Afirmativo:  # only if not 1a
+Imperativo Negativo:  # only if not 1a
+
+
+
+
+
+
+
