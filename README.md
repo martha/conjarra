@@ -2,6 +2,10 @@
 
 ## todo
 - the thing
+- do imperatives work?
+- consistent spanish
+- gerund maybe
+- make sure encoding always accepts accents
 - beauty
 - favicon
 - about page / links
@@ -22,34 +26,3 @@
 - installed postgres
 - createdb verbos
 - psql verbos < fred-jehle-spanish-verbs/jehle_verb_postgresql.sql
-
-## example
-
-Presente:
-Pretérito:
-Imperfecto:
-Futuro:
-Condicional:
-
-Presente perfecto:
-Pretérito anterior:
-Pluscuamperfecto:
-Futuro perfecto:
-Condicional perfecto:
-
-Presente subjuntivo:
-Imperfecto subjuntivo:
-Futuro subjuntivo: 
-Presente perfecto subjuntivo
-Pluscuamperfecto subjuntivo:
-Futuro perfecto subjuntivo:
-
-Imperativo Afirmativo:  # only if not 1a
-Imperativo Negativo:  # only if not 1a
-
-
-
-
-
-
-

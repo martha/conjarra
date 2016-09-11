@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <title>Conjarra</title> 
+    <title>Conjarra</title>
+    <link rel="stylesheet" type="text/css" href="moda.css">
   </head>
   <body>
 
@@ -14,32 +15,37 @@
     </div>
 
     <div id="prueba">
-      <form>
-        presente: <input type="text" name="presente"><br>
-        pretérito: <input type="text" name="pretérito"><br>
-        imperfecto: <input type="text" name="imperfecto"><br>
-        futuro: <input type="text" name="futuro"><br>
-        condicional: <input type="text" name="condicional"><br>
+      <form id="verbForm" method="post" action="/verificar">
+        <input id="verbInput" type="hidden" name="verbo">
+        <input id="personInput" type="hidden" name="persona">
 
-        presente perfecto: <input type="text" name="presente_perfecto"><br>
-        pretérito anterior: <input type="text" name="pretérito_anterior"><br>
-        pluscuamperfecto: <input type="text" name="pluscuamperfecto"><br>
-        futuro perfecto: <input type="text" name="futuro_perfecto"><br>
-        condicional perfecto: <input type="text" name="condicional_perfecto"><br>
+        presente: <input type="text" name="presente" id="presente"><br>
+        pretérito: <input type="text" name="pretérito" id="pretérito"><br>
+        imperfecto: <input type="text" name="imperfecto" id="imperfecto"><br>
+        futuro: <input type="text" name="futuro" id="futuro"><br>
+        condicional: <input type="text" name="condicional" id="condicional"><br>
 
-        presente subjuntivo: <input type="text" name="presente_subjuntivo"><br>
-        imperfecto subjuntivo: <input type="text" name="imperfecto_subjuntivo"><br>
-        futuro subjuntivo:  <input type="text" name="futuro_subjuntivo"><br>
-        presente perfecto subjuntivo: <input type="text" name="presente_perfecto_subjuntivo"><br>
-        pluscuamperfecto subjuntivo: <input type="text" name="pluscuamperfecto_subjuntivo"><br>
-        futuro perfecto subjuntivo: <input type="text" name="futuro_perfecto_subjuntivo"><br>
+        presente perfecto: <input type="text" name="presente_perfecto" id="presente_perfecto"><br>
+        pretérito anterior: <input type="text" name="pretérito_anterior" id="pretérito_anterior"><br>
+        pluscuamperfecto: <input type="text" name="pluscuamperfecto" id="pluscuamperfecto"><br>
+        futuro perfecto: <input type="text" name="futuro_perfecto" id="futuro_perfecto"><br>
+        condicional perfecto: <input type="text" name="condicional_perfecto" id="condicional_perfecto"><br>
+
+        presente subjuntivo: <input type="text" name="presente_subjuntivo" id="presente_subjuntivo"><br>
+        imperfecto subjuntivo: <input type="text" name="imperfecto_subjuntivo" id="imperfecto_subjuntivo"><br>
+        futuro subjuntivo:  <input type="text" name="futuro_subjuntivo" id="futuro_subjuntivo"><br>
+        presente perfecto subjuntivo: <input type="text" name="presente_perfecto_subjuntivo" id="presente_perfecto_subjuntivo"><br>
+        pluscuamperfecto subjuntivo: <input type="text" name="pluscuamperfecto_subjuntivo" id="pluscuamperfecto_subjuntivo"><br>
+        futuro perfecto subjuntivo: <input type="text" name="futuro_perfecto_subjuntivo" id="futuro_perfecto_subjuntivo"><br>
 
         <div id="imperativos">
-          imperativo Afirmativo: <input type="text" name="imperativo_afirmativo"><br> 
-          imperativo Negativo: <input type="text" name="imperativo_negativo"><br>
+          imperativo afirmativo: <input type="text" name="imperativo_afirmativo" id="imperativo_afirmativo"><br> 
+          imperativo negativo: <input type="text" name="imperativo_negativo" id="imperativo_negativo"><br>
         </div>
-        <input type="submit" value="enviar">
+        <input type="submit" value="enviar" id="enviar">
       </form>
+      <div id="éxito"></div>
+      <button id="volver">volver</button>
     </div>
 
     <script src="front.js"></script>
