@@ -6,7 +6,9 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const pg = require('pg')
-const conString = 'postgres://marthakedwards:@localhost/verbos' // TODO ??
+pg.defaults.ssl = true;
+const conString = process.env.DATABASE_URL || 
+  'postgres://marthakedwards:@localhost/verbos' // TODO ??
 
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
@@ -65,7 +67,6 @@ app.post('/verificar', function(req, res, next) {
         var key = keys[i];
         var submittedAnswer = req.body[key];
         var correctAnswer = respuestas[key];
-        console.log(key + ', ' + submittedAnswer + ', ' + correctAnswer);
         if (submittedAnswer != correctAnswer) {
           equivocaciones[key] = correctAnswer;
         }
