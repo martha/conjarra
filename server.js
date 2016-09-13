@@ -43,43 +43,32 @@ app.post('/verificar', function(req, res, next) {
         return next(err)
       }
 
+      var respuestas = {};
       var equivocaciones = {};
 
       var len = result.rows.length;
       for (var i = 0; i < len; i++) {
         var row = result.rows[i];
-        verify(row.mood, row.tense, row[persona], req.body);
+        var mood = row.mood.toLowerCase().replace(/ /g, "_");
+        var tense = row.tense.toLowerCase().replace(/ /g, "_");
+        var correctAnswer = row[persona];
+        var key = mood + '_' + tense;
+        respuestas[key] = correctAnswer;
       }
 
-      function verify(mood, tense, answer, submitted) {
-        switch(mood) {
-          case 'Indicativo':
-            if (submitted[prettify(tense)] != answer) {
-              console.log('error: ' + submitted[prettify(tense)] + 
-                ' is not ' + answer);
-              equivocaciones[prettify(tense)] = answer;
-            }
-            break;
-          case 'Subjuntivo':
-            if (submitted[prettify(tense + ' ' + mood)] != answer) {
-              console.log('error: ' + submitted[prettify(tense + ' ' + mood)] + 
-                ' is not ' + answer);
-              equivocaciones[prettify(tense + ' ' + mood)] = answer;
-            }
-            break;
-          case 'Imperativo Afirmativo':
-          case 'Imperativo Negativo':
-            if (submitted[prettify(mood)] != answer) {
-              console.log('error: ' + submitted[prettify(mood)] + 
-                ' is not ' + answer);
-              equivocaciones[prettify(mood)] = answer;
-            }
-            break;
+      delete req.body.verbo;
+      delete req.body.persona;
+      var keys = Object.keys(req.body);
+      len = keys.length;
+
+      for (i = 0; i < len; i++) {
+        var key = keys[i];
+        var submittedAnswer = req.body[key];
+        var correctAnswer = respuestas[key];
+        console.log(key + ', ' + submittedAnswer + ', ' + correctAnswer);
+        if (submittedAnswer != correctAnswer) {
+          equivocaciones[key] = correctAnswer;
         }
-      }
-
-      function prettify(str) {
-        return str.replace(/ /g,"_").toLowerCase();
       }
 
       res.json(equivocaciones)

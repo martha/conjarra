@@ -5,49 +5,68 @@
     <link rel="stylesheet" type="text/css" href="moda.css">
   </head>
   <body>
+    <div id="envolver">
+      <div id="descansillo"></div>
 
-    <div id="descansillo"></div>
+      <div id="antes_de_prueba">
+        <div id="verbo"></div>
+        <div id="persona"></div>
+        <button id="empezar">empezar</button>
+      </div>
 
-    <div id="antes_de_prueba">
-      <div id="verbo"></div>
-      <div id="persona"></div>
-      <button id="empezar">empezar</button>
+      <div id="prueba">
+        <form id="verbForm" method="post" action="/verificar" autocomplete="off">
+          <input id="verbInput" type="hidden" name="verbo">
+          <input id="personInput" type="hidden" name="persona">
+
+          <div class="izquierda">presente:</div> 
+          <input type="text" name="indicativo_presente" id="indicativo_presente"><br>
+          <div class="izquierda">pretérito:</div> 
+          <input type="text" name="indicativo_pretérito" id="indicativo_pretérito"><br>
+          <div class="izquierda">imperfecto:</div> 
+          <input type="text" name="indicativo_imperfecto" id="indicativo_imperfecto"><br>
+          <div class="izquierda">futuro:</div> 
+          <input type="text" name="indicativo_futuro" id="indicativo_futuro"><br>
+          <div class="izquierda">condicional:</div> 
+          <input type="text" name="indicativo_condicional" id="indicativo_condicional"><br>
+
+          <div class="izquierda">presente perfecto:</div> 
+          <input type="text" name="indicativo_presente_perfecto" id="indicativo_presente_perfecto"><br>
+          <!--<div class="izquierda">pretérito anterior:</div> 
+          <input type="text" name="indicativo_pretérito_anterior" id="indicativo_pretérito_anterior"><br>-->
+          <div class="izquierda">pluscuamperfecto:</div> 
+          <input type="text" name="indicativo_pluscuamperfecto" id="indicativo_pluscuamperfecto"><br>
+          <div class="izquierda">futuro perfecto:</div> 
+          <input type="text" name="indicativo_futuro_perfecto" id="indicativo_futuro_perfecto"><br>
+          <div class="izquierda">condicional perfecto:</div> 
+          <input type="text" name="indicativo_condicional_perfecto" id="indicativo_condicional_perfecto"><br>
+
+          <div class="izquierda">presente subjuntivo:</div> 
+          <input type="text" name="subjuntivo_presente" id="subjuntivo_presente"><br>
+          <div class="izquierda">imperfecto subjuntivo:</div> 
+          <input type="text" name="subjuntivo_imperfecto" id="subjuntivo_imperfecto"><br>
+          <!--<div class="izquierda">futuro subjuntivo:</div>  
+          <input type="text" name="subjuntivo_futuro" id="subjuntivo_futuro"><br>-->
+          <div class="izquierda">presente perfecto subjuntivo:</div> 
+          <input type="text" name="subjuntivo_presente_perfecto" id="subjuntivo_presente_perfecto"><br>
+          <div class="izquierda">pluscuamperfecto subjuntivo:</div> 
+          <input type="text" name="subjuntivo_pluscuamperfecto" id="subjuntivo_pluscuamperfecto"><br>
+          <!--<div class="izquierda">futuro perfecto subjuntivo:</div> 
+          <input type="text" name="subjuntivo_futuro_perfecto" id="subjuntivo_futuro_perfecto"><br>-->
+
+          <div id="imperativos">
+            <div class="izquierda">imperativo afirmativo:</div> 
+            <input type="text" name="imperativo_afirmativo_presente" id="imperativo_afirmativo_presente"><br> 
+            <div class="izquierda">imperativo negativo:</div> 
+            <input type="text" name="imperativo_negativo_presente" id="imperativo_negativo_presente"><br>
+          </div>
+          <input type="submit" value="enviar" id="enviar">
+        </form>
+        <div id="éxito"></div>
+        <button id="volver">volver</button>
+      </div>
+
     </div>
-
-    <div id="prueba">
-      <form id="verbForm" method="post" action="/verificar">
-        <input id="verbInput" type="hidden" name="verbo">
-        <input id="personInput" type="hidden" name="persona">
-
-        presente: <input type="text" name="presente" id="presente"><br>
-        pretérito: <input type="text" name="pretérito" id="pretérito"><br>
-        imperfecto: <input type="text" name="imperfecto" id="imperfecto"><br>
-        futuro: <input type="text" name="futuro" id="futuro"><br>
-        condicional: <input type="text" name="condicional" id="condicional"><br>
-
-        presente perfecto: <input type="text" name="presente_perfecto" id="presente_perfecto"><br>
-        pretérito anterior: <input type="text" name="pretérito_anterior" id="pretérito_anterior"><br>
-        pluscuamperfecto: <input type="text" name="pluscuamperfecto" id="pluscuamperfecto"><br>
-        futuro perfecto: <input type="text" name="futuro_perfecto" id="futuro_perfecto"><br>
-        condicional perfecto: <input type="text" name="condicional_perfecto" id="condicional_perfecto"><br>
-
-        presente subjuntivo: <input type="text" name="presente_subjuntivo" id="presente_subjuntivo"><br>
-        imperfecto subjuntivo: <input type="text" name="imperfecto_subjuntivo" id="imperfecto_subjuntivo"><br>
-        futuro subjuntivo:  <input type="text" name="futuro_subjuntivo" id="futuro_subjuntivo"><br>
-        presente perfecto subjuntivo: <input type="text" name="presente_perfecto_subjuntivo" id="presente_perfecto_subjuntivo"><br>
-        pluscuamperfecto subjuntivo: <input type="text" name="pluscuamperfecto_subjuntivo" id="pluscuamperfecto_subjuntivo"><br>
-        futuro perfecto subjuntivo: <input type="text" name="futuro_perfecto_subjuntivo" id="futuro_perfecto_subjuntivo"><br>
-
-        <div id="imperativos">
-          imperativo afirmativo: <input type="text" name="imperativo_afirmativo" id="imperativo_afirmativo"><br> 
-          imperativo negativo: <input type="text" name="imperativo_negativo" id="imperativo_negativo"><br>
-        </div>
-        <input type="submit" value="enviar" id="enviar">
-      </form>
-      <div id="éxito"></div>
-      <button id="volver">volver</button>
-    </div>
-
     <script src="front.js"></script>
   </body>
 </html>

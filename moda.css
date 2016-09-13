@@ -1,7 +1,85 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+}
+
+#envolver {
+  width: 30em;
+  max-width: 100%;
+  margin: 1em auto;
+}
+
+#antes_de_prueba {
+  text-align: center;
+}
+
+#verbo {
+  font-size: 4em;
+  margin: auto;
+  margin-bottom: 0.2em;
+  display: block;
+}
+
+#persona {
+  font-style: italic;
+}
+
 #prueba, #volver {
   display: none;
 }
 
+#prueba {
+  text-align: center;
+}
+
+#verbForm {
+  margin-top: 1em;
+}
+
+.izquierda {
+  width: 48%;
+  display: inline-block;
+  text-align: right;
+}
+
+input[type="text"] {
+  width: 48%;
+  font-size: 1em;
+  padding: 0.1em;
+  margin: 0.1em;
+  font-family: Georgia;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+input[type="text"]:focus {
+  outline: 0;
+  border-bottom: 1px solid #aaaaaa;
+}
+
 .incorrecto {
   color: red;
+}
+
+button, input[type="submit"] {
+  margin: 1em auto;
+  padding: 1em;
+  background-color: #dddddd;
+  border: 0;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Georgia, serif;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #aaaaaa;
+}
+
+button:focus, input[type="submit"]:focus {
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+  background: #777777;
 }
