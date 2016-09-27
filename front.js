@@ -67,7 +67,7 @@ function ajaxPost(form, callback) {
 
   var elements = form.elements;
 
-  for (element of elements) {
+  for (element in elements) {
     if (element.id == "enviar") {
       continue;
     }
@@ -88,7 +88,7 @@ function displayResults(results) {
     return;
   }
 
-  for (key of keys) {
+  for (key in keys) {
     var answer = results[key];
     var element = document.getElementById(key);
     element.value = answer;

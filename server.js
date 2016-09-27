@@ -6,7 +6,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 const pg = require('pg')
-pg.defaults.ssl = true;
+//pg.defaults.ssl = true;
 const conString = process.env.DATABASE_URL || 
   'postgres://marthakedwards:@localhost/verbos' // TODO ??
 
