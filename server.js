@@ -65,7 +65,7 @@ app.post('/verificar', function(req, res, next) {
 
       for (i = 0; i < len; i++) {
         var key = keys[i];
-        var submittedAnswer = req.body[key];
+        var submittedAnswer = req.body[key].toLowerCase().trim();
         var correctAnswer = respuestas[key];
         if (submittedAnswer != correctAnswer) {
           equivocaciones[key] = correctAnswer;
@@ -111,5 +111,5 @@ app.listen(port, (err) => {
     return console.log('Error: ', err)
   }
 
-  console.log(`server listening on 0.0.0.0:${port}`)
+  console.log(`server listening on ${port}`)
 })
