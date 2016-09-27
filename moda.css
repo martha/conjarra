@@ -61,7 +61,7 @@ input[type="text"]:focus {
   color: red;
 }
 
-button, input[type="submit"] {
+.botón {
   margin: 1em auto;
   padding: 1em;
   background-color: #dddddd;
@@ -70,13 +70,14 @@ button, input[type="submit"] {
   cursor: pointer;
   border-radius: 4px;
   font-family: Georgia, serif;
+  -webkit-appearance: none;
 }
 
-button:hover, input[type="submit"]:hover {
+.botón:hover {
   background-color: #aaaaaa;
 }
 
-button:focus, input[type="submit"]:focus {
+.botón:focus {
   outline: 0;
   -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);

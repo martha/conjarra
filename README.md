@@ -1,11 +1,6 @@
 # conjarra
 
 ## todo
-- bug fixes
-- development environment...
-- fix verification when we don't use all
-- not finding the subjunctives
-- do imperatives work?
 - consistent spanish within code
 - gerund maybe
 - make sure encoding always accepts accents
@@ -28,3 +23,5 @@
 - installed postgres
 - createdb verbos
 - psql verbos < jehle_verb_postgresql.sql
+- set up heroku server/
+- git commit master heroku/

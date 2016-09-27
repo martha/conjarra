@@ -111,5 +111,5 @@ app.listen(port, (err) => {
     return console.log('Error: ', err)
   }
 
-  console.log(`server listening on ${port}`)
+  console.log(`server listening on 0.0.0.0:${port}`)
 })

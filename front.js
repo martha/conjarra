@@ -66,8 +66,10 @@ function ajaxPost(form, callback) {
       data = {};
 
   var elements = form.elements;
+  var len = elements.length;
 
-  for (element in elements) {
+  for (var i = 0; i < len; i++) {
+    var element = elements[i];
     if (element.id == "enviar") {
       continue;
     }
@@ -83,12 +85,15 @@ function ajaxPost(form, callback) {
 function displayResults(results) {
   results = JSON.parse(results.target.response);
   var keys = Object.keys(results);
-  if (keys.length == 0) {
+  var len = keys.length;
+
+  if (len == 0) {
     document.getElementById("éxito").innerHTML = "Todos correctos :)"
     return;
   }
 
-  for (key in keys) {
+  for (var i = 0; i < len; i++) {
+    var key = keys[i];
     var answer = results[key];
     var element = document.getElementById(key);
     element.value = answer;
