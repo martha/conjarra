@@ -62,7 +62,7 @@ function verbose(persona) {
 
 function ajaxPost(form, callback) {
   var url = form.action;
-  var xhr = new XMLHTTPRequest();
+  var xhttp = new XMLHttpRequest();
   var data = {};
 
   var elements = form.elements;
@@ -76,10 +76,10 @@ function ajaxPost(form, callback) {
     data[element.name] = element.value;
   }
 
-  xhr.open("POST", url);
-  xhr.setRequestHeader("Content-type", "application/json");
-  xhr.onload = callback.bind(xhr);
-  xhr.send(JSON.stringify(data));
+  xhttp.open("POST", url);
+  xhttp.setRequestHeader("Content-type", "application/json");
+  xhttp.onload = callback.bind(xhttp);
+  xhttp.send(JSON.stringify(data));
 }
 
 function displayResults(results) {
