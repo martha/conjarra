@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   document.getElementById("volver").onclick = function() {
     location.reload();
-  }
+  };
 });
 
 function requestVerb() {
@@ -39,10 +39,10 @@ function requestVerb() {
 function verbose(persona) {
   var element = document.getElementById("imperativos");
   switch(persona) {
-    case '1s': 
+    case '1s':
       element.style.display = "none";
       return 'yo (1ª persona singular)';
-    case '2s': 
+    case '2s':
       element.style.display = "block";
       return 'tú (2ª persona singular)';
     case '3s':
@@ -61,9 +61,9 @@ function verbose(persona) {
 }
 
 function ajaxPost(form, callback) {
-  var url = form.action,
-      xhr = new XMLHttpRequest(),
-      data = {};
+  var url = form.action;
+  var xhr = new XMLHTTPRequest();
+  var data = {};
 
   var elements = form.elements;
   var len = elements.length;
@@ -78,7 +78,7 @@ function ajaxPost(form, callback) {
 
   xhr.open("POST", url);
   xhr.setRequestHeader("Content-type", "application/json");
-  xhr.onload = callback.bind(xhr); 
+  xhr.onload = callback.bind(xhr);
   xhr.send(JSON.stringify(data));
 }
 

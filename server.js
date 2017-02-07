@@ -1,48 +1,45 @@
-'use strict'
+'use strict';
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const app = express()
-const port = process.env.PORT || 3000
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+const port = process.env.PORT || 3000;
 
-const pg = require('pg')
+const pg = require('pg');
 //pg.defaults.ssl = true;
-const conString = process.env.DATABASE_URL || 
-  'postgres://marthakedwards:@localhost/verbos' // TODO ??
+const conString = process.env.DATABASE_URL ||
+  'postgres://marthakedwards:@localhost/verbos';
 
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
 
 // Error handler. Must be last function added with app.use
 app.use((err, request, response, next) => {
-  console.log(err)
-  response.status(500).send('Oh noes')
-})
+  console.log(err);
+  response.status(500).send('Oh noes');
+});
 
 app.get('/', (request, response) => {
-  response.render('index.html')
-})
+  response.render('index.html');
+});
 
 app.post('/verificar', function(req, res, next) {
-
   pg.connect(conString, function (err, client, done) {
     if (err) {
-      // pass the error to the express error handler
-      return next(err)
+      return next(err);
     }
 
     var persona = String('form_' + req.body.persona);
     var verbo = req.body.verbo;
 
-    var queryString = 'SELECT infinitive, mood, tense, ' + persona + ' ' +  //TODO
-      'FROM verbs WHERE infinitive = $1'
+    var queryString = 'SELECT infinitive, mood, tense, ' + persona + ' ' +
+      'FROM verbs WHERE infinitive = $1';
 
     client.query(queryString, [verbo], function (err, result) {
-      done()
+      done();
 
       if (err) {
-        // pass the error to the express error handler
-        return next(err)
+        return next(err);
       }
 
       var respuestas = {};
@@ -72,44 +69,42 @@ app.post('/verificar', function(req, res, next) {
         }
       }
 
-      res.json(equivocaciones)
-    })
-  })
-})
+      res.json(equivocaciones);
+    });
+  });
+});
 
 app.get('/random', function(req, res, next) {
   pg.connect(conString, function (err, client, done) {
     if (err) {
-      // pass the error to the express error handler
-      return next(err)
+      return next(err);
     }
 
     var index = Math.floor(Math.random() * 6);
-    var persons = ['1s', '2s', '3s', '1p', '2p', '3p']
-    var person = persons[index]
+    var persons = ['1s', '2s', '3s', '1p', '2p', '3p'];
+    var person = persons[index];
 
-    var queryString = 'SELECT infinitive FROM verbs ORDER BY RANDOM() LIMIT 1;'
+    var queryString = 'SELECT infinitive FROM verbs ORDER BY RANDOM() LIMIT 1;';
 
     client.query(queryString, [], function (err, result) {
-      done()
+      done();
 
       if (err) {
-        // pass the error to the express error handler
-        return next(err)
+        return next(err);
       }
 
-      var data = result.rows[0]
-      data.persona = person
+      var data = result.rows[0];
+      data.persona = person;
 
-      res.json(data)
-    })
-  })
-})
+      res.json(data);
+    });
+  });
+});
 
 app.listen(port, (err) => {
   if (err) {
-    return console.log('Error: ', err)
+    return console.log('Error: ', err);
   }
 
-  console.log(`server listening on ${port}`)
+  console.log(`server listening on ${port}`);
 })
